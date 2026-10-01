@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema da Lanchonete</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .escondido { display: none; }
+        .erro { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>Lanchonete</h1>
+
+    <div id="telaLogin">
+        <button onclick="entrarNoSistema()">Fazer Login</button>
+    </div>
+
+    <div id="telaMenu" class="escondido">
+        <h3>Menu:</h3>
+        <ul>
+            <li>1 - Hambúrguer - R$ 15,00</li>
+            <li>2 - Pizza - R$ 20,00</li>
+            <li>3 - Refrigerante - R$ 6,00</li>
+            <li>4 - Batata Frita - R$ 10,00</li>
+        </ul>
+
+        <p>Digite o número do produto:</p>
+        <input type="number" id="codigoProduto">
+        
+        <button onclick="adicionarProduto()">Adicionar</button>
+        <button onclick="finalizarPedido()">Finalizar Pedido (0)</button>
+
+        <p id="mensagemErro" class="erro"></p>
+    </div>
+
+    <div id="telaRecibo" class="escondido">
+        <h3>Resumo do Pedido:</h3>
+        <div id="detalhesRecibo"></div>
+    </div>
+
+    <script src="lanchonete.js"></script>
+
+</body>
+</html>
